@@ -1,0 +1,7 @@
+<div class="space-x-2 space-y-2 p-8 flex flex-wrap justify-center  sm:p-3 bg-hero-pattern " >
+  <button *ngFor="let skill of skills"
+    class=" btn {{skill.color}} px-5 py-2 rounded-lg font-extrabold text-white hover:bg-slate-600 transform duration-150 ease-in-out hover:scale-105 hover:shadow-lg xsm:text-sm"
+  >
+    <p>#{{ skill.name }}</p>
+  </button>
+</div>
