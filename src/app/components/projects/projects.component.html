@@ -1,24 +1,24 @@
-<div class="bg-hero-pattern ">
+<div class="bg-hero-pattern dark:bg-hero-pattern-dark">
   <h2
-    class="text-xl text-center pt-5 hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 transition duration-200 ease-in-out"
+    class="text-xl text-center pt-5 hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 transition duration-200 ease-in-out dark:text-slate-200"
   >
     Projects
   </h2>
   <div class="flex gap-x-5 gap-y-3 justify-center p-3 xsm:flex-wrap">
     <div
       *ngFor="let project of projects"
-      class="p-3 flex flex-col justify-start items-center bg-white shadow-md rounded-md w-56 object-cover xsm:w-72"
+      class="p-3 flex flex-col justify-start items-center bg-white shadow-md rounded-md w-56 object-cover xsm:w-72 dark:bg-slate-900"
     >
       <img
         src="{{ project.imgSource }}"
         alt=""
         class="w-24 h-24 object-contain"
       />
-      <h2 class="text-xs text-center p-2">
+      <h2 class="text-xs text-center p-2 dark:text-slate-300">
         {{ project.name }}
       </h2>
       <div class="flex flex-col h-56 justify-between xsm:h-64">
-        <p class="text-justify lg:text-xs w-48 py-2 xsm:w-64">
+        <p class="text-justify lg:text-xs w-48 py-2 xsm:w-64 dark:text-slate-300">
           {{ project.description }}
         </p>
         <div class="flex gap-2 flex-wrap">
@@ -33,14 +33,14 @@
           <a href="{{ project.github }}" target="_blank">
             <fa-icon
               [icon]="faCodeFork"
-              class="fa-lg hover:text-teal-600 transform duration-150 ease-in-out"
+              class="fa-lg hover:text-teal-600 transform duration-150 ease-in-out dark:text-slate-300"
             ></fa-icon>
           </a>
 
           <a href="{{ project.live }}" target="_blank">
             <fa-icon
               [icon]="faDisplay"
-              class="fa-lg hover:text-indigo-600 transform duration-150 ease-in-out"
+              class="fa-lg hover:text-indigo-600 transform duration-150 ease-in-out dark:text-slate-300"
             ></fa-icon>
           </a>
         </div>
