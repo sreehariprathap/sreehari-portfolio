@@ -14,7 +14,9 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        "hero-pattern": 'url("src/assets/patternpad (3).svg")',
+        "hero-pattern": 'url("src/assets/patternpad (5).svg")',
+        "hero-pattern-dark": 'url("src/assets/patternpad (7).svg")',
+
       },
     },
   },

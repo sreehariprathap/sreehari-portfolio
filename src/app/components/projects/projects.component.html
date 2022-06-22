@@ -1,0 +1,50 @@
+<div class="bg-hero-pattern ">
+  <h2
+    class="text-xl text-center pt-5 hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 transition duration-200 ease-in-out"
+  >
+    Projects
+  </h2>
+  <div class="flex gap-x-5 gap-y-3 justify-center p-3 xsm:flex-wrap">
+    <div
+      *ngFor="let project of projects"
+      class="p-3 flex flex-col justify-start items-center bg-white shadow-md rounded-md w-56 object-cover xsm:w-72"
+    >
+      <img
+        src="{{ project.imgSource }}"
+        alt=""
+        class="w-24 h-24 object-contain"
+      />
+      <h2 class="text-xs text-center p-2">
+        {{ project.name }}
+      </h2>
+      <div class="flex flex-col h-56 justify-between xsm:h-64">
+        <p class="text-justify lg:text-xs w-48 py-2 xsm:w-64">
+          {{ project.description }}
+        </p>
+        <div class="flex gap-2 flex-wrap">
+          <p
+            class="p-1 text-xs rounded-lg font-extrabold bg-slate-400 text-white hover:bg-slate-600 transform duration-150 ease-in-out cursor-pointer"
+            *ngFor="let item of project.technologies"
+          >
+            #{{ item }}
+          </p>
+        </div>
+        <div class="p-3 gap-3 flex justify-self-end">
+          <a href="{{ project.github }}" target="_blank">
+            <fa-icon
+              [icon]="faCodeFork"
+              class="fa-lg hover:text-teal-600 transform duration-150 ease-in-out"
+            ></fa-icon>
+          </a>
+
+          <a href="{{ project.live }}" target="_blank">
+            <fa-icon
+              [icon]="faDisplay"
+              class="fa-lg hover:text-indigo-600 transform duration-150 ease-in-out"
+            ></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
